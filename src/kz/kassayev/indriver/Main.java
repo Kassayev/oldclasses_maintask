@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         List<Car> cars = new ArrayList<>();
+
         TaxiPark taxi = new TaxiPark();
 
         cars.add(new ElectricCar(Mark.TESLA, "Model S", Type.SEDAN, 82_000, 2015, 34_000, 210, true, 5.5, 4, true, BatteryType.ALUMINUM_ION, 400, 350));
@@ -30,6 +31,11 @@ public class Main {
             System.out.println(car);
         }
 
+        System.out.println("Sort cars by economy : (At first electric cars, then petrol");
+        List<Car> carbyEconomy = taxi.sortyByFuelEconomy(cars);
+        for (Car car:carbyEconomy) {
+            System.out.println(car);
+        }
 
 
     }

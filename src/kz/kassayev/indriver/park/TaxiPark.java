@@ -9,7 +9,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class TaxiPark {
-    private String name;
 
     public List<Car> showAllCars(List<Car> cars){
         List<Car> selectAll = new ArrayList<>();
@@ -40,6 +39,7 @@ public class TaxiPark {
     public List<Car> sortyByFuelEconomy(List<Car> cars){
         List<PetrolCar> petrolCars = new ArrayList<>();
         List<ElectricCar> electricCars = new ArrayList<>();
+        List<Car> result = new ArrayList<>();
 
         for (Car car : cars){
             if (car instanceof ElectricCar){
@@ -49,7 +49,12 @@ public class TaxiPark {
             }
         }
 
+
         electricCars.sort(Comparator.comparing(ElectricCar::getLifeTimeOfBattery));
+        petrolCars.sort(Comparator.comparing(PetrolCar::getFuelConsumption));
+        result.addAll(electricCars);
+        result.addAll(petrolCars);
+        return result;
     }
 
 }
