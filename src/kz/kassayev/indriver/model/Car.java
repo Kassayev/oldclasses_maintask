@@ -1,17 +1,17 @@
 package kz.kassayev.indriver.model;
 
-public class Car {
-    private Mark marks;
-    private String model;
-    private Type types;
-    private int price;
-    private int year;
-    private int milage;
-    private int maxSpeed;
-    private boolean automat;
-    private double acceleration;
-    private int numberOfSeats;
-    private boolean conditioner;
+public abstract class Car {
+    protected Mark marks;
+    protected String model;
+    protected Type types;
+    protected int price;
+    protected int year;
+    protected int milage;
+    protected int maxSpeed;
+    protected boolean automat;
+    protected double acceleration;
+    protected int numberOfSeats;
+    protected boolean conditioner;
 
     public Car(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner) {
         this.marks = marks;

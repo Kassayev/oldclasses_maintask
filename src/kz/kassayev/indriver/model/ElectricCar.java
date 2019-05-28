@@ -27,7 +27,18 @@ public class ElectricCar extends Car {
     @Override
     public String toString() {
         return "ElectricCar{" +
-                "batteryTypes=" + batteryTypes +
+                "marks=" + marks +
+                ", model='" + model + '\'' +
+                ", types=" + types +
+                ", price=" + price +
+                ", year=" + year +
+                ", milage=" + milage +
+                ", maxSpeed=" + maxSpeed +
+                ", automat=" + automat +
+                ", acceleration=" + acceleration +
+                ", numberOfSeats=" + numberOfSeats +
+                ", conditioner=" + conditioner +
+                ", batteryTypes=" + batteryTypes +
                 ", chargingTime=" + chargingTime +
                 ", lifeTimeOfBattery=" + lifeTimeOfBattery +
                 '}';

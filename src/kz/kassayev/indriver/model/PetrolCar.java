@@ -27,7 +27,18 @@ public class PetrolCar extends Car {
     @Override
     public String toString() {
         return "PetrolCar{" +
-                "fuelTypes=" + fuelTypes +
+                "marks=" + marks +
+                ", model='" + model + '\'' +
+                ", types=" + types +
+                ", price=" + price +
+                ", year=" + year +
+                ", milage=" + milage +
+                ", maxSpeed=" + maxSpeed +
+                ", automat=" + automat +
+                ", acceleration=" + acceleration +
+                ", numberOfSeats=" + numberOfSeats +
+                ", conditioner=" + conditioner +
+                ", fuelTypes=" + fuelTypes +
                 ", fuelTankCapacity=" + fuelTankCapacity +
                 ", fuelConsumption=" + fuelConsumption +
                 '}';
