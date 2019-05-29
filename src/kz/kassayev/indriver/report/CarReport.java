@@ -6,13 +6,14 @@ import java.util.List;
 
 public class CarReport {
     /**
-     * This method to not write cycle again
+     * this method is not to write the loop again
      *
      * @param cars
      */
-    public void cicleForSout(List<Car> cars) {
+    public void cycleForSout(List<Car> cars) {
         for (Car car : cars) {
             System.out.println(car);
         }
     }
 }
+

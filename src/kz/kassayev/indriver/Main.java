@@ -24,17 +24,17 @@ public class Main {
 
         System.out.println("ALL TAXI-CARS : ");
         List<Car> allCars = handler.showAllCars(taxipark);
-        carReport.cicleForSout(allCars);
+        carReport.cycleForSout(allCars);
 
         System.out.println("TOTAL AMOUNT PRICE OF ALL TAXI-CARS : " + handler.allCarsCost(taxipark) + "$");
 
         System.out.println("SPEED RANGE SELECTION : ");
         List<Car> carbySpeed = handler.showBySpeedRange(taxipark, 200, 220);
-        carReport.cicleForSout(carbySpeed);
+        carReport.cycleForSout(carbySpeed);
 
         System.out.println("SORT CARS BY ECONOMY (AT FIRST ELECTRIC, THEN PETROL) : ");
         List<Car> carbyEconomy = handler.sortyByFuelEconomy(taxipark);
-        carReport.cicleForSout(carbyEconomy);
+        carReport.cycleForSout(carbyEconomy);
 
         /**
          * using interface
