@@ -16,7 +16,7 @@ public class AutoPark {
         this.name = name;
     }
 
-    public void addCar(Car car){
+    public void addCar(Car car) {
         taxipark.add(car);
     }
 

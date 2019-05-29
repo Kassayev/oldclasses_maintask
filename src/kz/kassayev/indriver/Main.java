@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        AutoPark autoPark = new AutoPark("INDRIVER KZ");
+        AutoPark autoPark = new AutoPark("Indriver Nur~Sultan");
         Handler handler = new Handler();
         CarReport carReport = new CarReport();
 
