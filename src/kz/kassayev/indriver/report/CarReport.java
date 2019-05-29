@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CarReport {
     /**
-     * This method to not write cycle again
+     * this method is not to write the loop again
      *
      * @param cars
      */
