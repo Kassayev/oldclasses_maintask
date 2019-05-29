@@ -49,13 +49,10 @@ public class Handler {
             }
         }
 
-
         electricCars.sort(Comparator.comparing(ElectricCar::getLifeTimeOfBattery));
         petrolCars.sort(Comparator.comparing(PetrolCar::getFuelConsumption));
         result.addAll(electricCars);
         result.addAll(petrolCars);
         return result;
     }
-
-
 }

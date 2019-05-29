@@ -1,6 +1,6 @@
 package kz.kassayev.indriver.service;
 
 public interface Passenger {
-    int addPassenger();
+    void addPassenger(int passengers);
     int getPassengerCount();
 }

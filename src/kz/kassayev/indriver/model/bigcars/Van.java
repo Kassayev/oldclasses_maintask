@@ -11,6 +11,7 @@ public class Van extends PetrolCar implements Passenger, Freight {
     private short freightId = 0;
     private int passengers = 0;
     private double freightWeight = 0;
+    private int passengerCount;
 
     public Van(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, FuelType fuelTypes, int fuelTankCapacity, int fuelConsumption, short freightId, int passengers, double freightWeight) {
         super(marks, model, types, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner, fuelTypes, fuelTankCapacity, fuelConsumption);
@@ -20,14 +21,21 @@ public class Van extends PetrolCar implements Passenger, Freight {
     }
 
     @Override
-    public int addPassenger() {
-        passengers++;
-        return passengers;
+    public void addPassenger(int passengers) {
+        if (passengers > numberOfSeats){
+            int otherPassengers;
+            otherPassengers = passengers - numberOfSeats;
+            System.out.println("OTHER " + otherPassengers + " PASSANGERS WILL WALL, BECAUSE " + numberOfSeats + " SEATS.");
+            passengerCount = numberOfSeats;
+        } else {
+            System.out.println("PASSANGERS ASSIGNED.");
+            passengerCount = passengers;
+        }
     }
 
     @Override
     public int getPassengerCount() {
-        return passengers;
+        return passengerCount;
     }
 
     @Override

@@ -7,22 +7,29 @@ import kz.kassayev.indriver.model.Type;
 import kz.kassayev.indriver.service.Passenger;
 
 public class Bus extends PetrolCar implements Passenger {
-    private int passengers = 0;
+    private boolean panoramicRoof;
+    private int passengerCount;
 
-    public Bus(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, FuelType fuelTypes, int fuelTankCapacity, int fuelConsumption, int passengers) {
+    public Bus(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, FuelType fuelTypes, int fuelTankCapacity, int fuelConsumption, boolean panoramicRoof) {
         super(marks, model, types, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner, fuelTypes, fuelTankCapacity, fuelConsumption);
-        this.passengers = passengers;
+        this.panoramicRoof = panoramicRoof;
     }
 
     @Override
-    public int addPassenger() {
-        System.out.println("Passenger assigned");
-        passengers++;
-        return passengers;
+    public void addPassenger(int passengers) {
+        if (passengers > numberOfSeats){
+            int otherPassengers;
+            otherPassengers = passengers - numberOfSeats;
+            System.out.println("OTHER " + otherPassengers + " PASSANGERS WILL WALL, BECAUSE " + numberOfSeats + " SEATS.");
+            passengerCount = numberOfSeats;
+        } else {
+            System.out.println("PASSANGERS ASSIGNED.");
+            passengerCount = passengers;
+        }
     }
 
     @Override
     public int getPassengerCount() {
-        return passengers;
+        return passengerCount;
     }
 }
