@@ -1,5 +1,9 @@
 package kz.kassayev.indriver.model;
 
+/**
+ * we make this class abstract so that it is not possible to create its objects
+ * variables make protected that heirs could only use
+ */
 public abstract class Car {
     protected Mark marks;
     protected String model;

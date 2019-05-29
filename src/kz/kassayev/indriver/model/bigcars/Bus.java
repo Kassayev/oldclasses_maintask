@@ -6,6 +6,9 @@ import kz.kassayev.indriver.model.PetrolCar;
 import kz.kassayev.indriver.model.Type;
 import kz.kassayev.indriver.service.Passenger;
 
+/**
+ * This class for implementing interfaces, separate class from the work of taxis
+ */
 public class Bus extends PetrolCar implements Passenger {
     private boolean panoramicRoof;
     private int passengerCount;
@@ -15,9 +18,14 @@ public class Bus extends PetrolCar implements Passenger {
         this.panoramicRoof = panoramicRoof;
     }
 
+    /**
+     * I set passengers in this bus
+     *
+     * @param passengers
+     */
     @Override
     public void addPassenger(int passengers) {
-        if (passengers > numberOfSeats){
+        if (passengers > numberOfSeats) {
             int otherPassengers;
             otherPassengers = passengers - numberOfSeats;
             System.out.println("OTHER " + otherPassengers + " PASSANGERS WILL WALL, BECAUSE " + numberOfSeats + " SEATS.");
@@ -28,6 +36,11 @@ public class Bus extends PetrolCar implements Passenger {
         }
     }
 
+    /**
+     * That get passengers count who got on the bus
+     *
+     * @return count passengers
+     */
     @Override
     public int getPassengerCount() {
         return passengerCount;

@@ -1,5 +1,8 @@
 package kz.kassayev.indriver.model;
 
+/**
+ * This class hier class Car
+ */
 public class ElectricCar extends Car {
     private BatteryType batteryTypes;
     private int chargingTime;

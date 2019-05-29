@@ -10,6 +10,12 @@ import java.util.List;
 
 public class Handler {
 
+    /**
+     * This class can show all taxi cars for user
+     *
+     * @param cars
+     * @return list of cars
+     */
     public List<Car> showAllCars(List<Car> cars) {
         List<Car> selectAll = new ArrayList<>();
         for (Car car : cars) {
@@ -18,6 +24,12 @@ public class Handler {
         return selectAll;
     }
 
+    /**
+     * This class calculate price of cars in taxi park
+     *
+     * @param cars
+     * @return total amount price
+     */
     public int allCarsCost(List<Car> cars) {
         int sum = 0;
         for (Car car : cars) {
@@ -26,7 +38,15 @@ public class Handler {
         return sum;
     }
 
-    public List<Car> betweenSpeed(List<Car> cars, int min, int max) {
+    /**
+     * User set parametrs
+     *
+     * @param cars
+     * @param min
+     * @param max
+     * @return get list of cars, which this speed range
+     */
+    public List<Car> showBySpeedRange(List<Car> cars, int min, int max) {
         List<Car> carSelection = new ArrayList<>();
         for (Car car : cars) {
             if (car.getMaxSpeed() >= min && car.getMaxSpeed() <= max) {
@@ -36,6 +56,13 @@ public class Handler {
         return carSelection;
     }
 
+    /**
+     * At first determines class instance, then assign.
+     * then sorts separately, because electric car it has different results
+     *
+     * @param cars
+     * @return get sorted list
+     */
     public List<Car> sortyByFuelEconomy(List<Car> cars) {
         List<PetrolCar> petrolCars = new ArrayList<>();
         List<ElectricCar> electricCars = new ArrayList<>();

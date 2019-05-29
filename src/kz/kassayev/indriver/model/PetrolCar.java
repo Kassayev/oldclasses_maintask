@@ -1,5 +1,8 @@
 package kz.kassayev.indriver.model;
 
+/**
+ * This class hier class Car
+ */
 public class PetrolCar extends Car {
     private FuelType fuelTypes;
     private int fuelTankCapacity;

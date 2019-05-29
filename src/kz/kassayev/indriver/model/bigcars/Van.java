@@ -7,6 +7,9 @@ import kz.kassayev.indriver.model.Type;
 import kz.kassayev.indriver.service.Passenger;
 import kz.kassayev.indriver.service.Freight;
 
+/**
+ * This class for implementing interfaces, separate class from the work of taxis
+ */
 public class Van extends PetrolCar implements Passenger, Freight {
     private short freightId = 0;
     private int passengers = 0;
@@ -20,9 +23,14 @@ public class Van extends PetrolCar implements Passenger, Freight {
         this.freightWeight = freightWeight;
     }
 
+    /**
+     * I set passengers in this van
+     *
+     * @param passengers
+     */
     @Override
     public void addPassenger(int passengers) {
-        if (passengers > numberOfSeats){
+        if (passengers > numberOfSeats) {
             int otherPassengers;
             otherPassengers = passengers - numberOfSeats;
             System.out.println("OTHER " + otherPassengers + " PASSANGERS WILL WALL, BECAUSE " + numberOfSeats + " SEATS.");
@@ -33,11 +41,21 @@ public class Van extends PetrolCar implements Passenger, Freight {
         }
     }
 
+    /**
+     * That get passengers count who got on the van
+     *
+     * @return
+     */
     @Override
     public int getPassengerCount() {
         return passengerCount;
     }
 
+    /**
+     * Id of freight
+     *
+     * @return get Id
+     */
     @Override
     public short getFreightId() {
         if (freightId == 0) {
@@ -46,9 +64,14 @@ public class Van extends PetrolCar implements Passenger, Freight {
         return freightId;
     }
 
+    /**
+     * weight of freight
+     *
+     * @return get freight weight
+     */
     @Override
     public double getFreightWeight() {
-        if (freightWeight == 0){
+        if (freightWeight == 0) {
             System.out.println("There is no load in the car");
         }
         return freightWeight;
