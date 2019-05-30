@@ -8,11 +8,11 @@ import java.util.List;
 /**
  * Create autopark for taxi cars
  */
-public class AutoPark {
+public class TaxiPark {
     private String name;
     private List<Car> taxipark = new ArrayList<>();
 
-    public AutoPark(String name) {
+    public TaxiPark(String name) {
         this.name = name;
     }
 
