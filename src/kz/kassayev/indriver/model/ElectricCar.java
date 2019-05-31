@@ -1,22 +1,22 @@
 package kz.kassayev.indriver.model;
 
 /**
- * This class hier class Car
+ * This class hier class AbstractCar
  */
-public class ElectricCar extends Car {
-    private BatteryType batteryTypes;
+public class ElectricCar extends AbstractCar {
+    private BatteryType batteryType;
     private int chargingTime;
     private int lifeTimeOfBattery;
 
-    public ElectricCar(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, BatteryType batteryTypes, int chargingTime, int lifeTimeOfBattery) {
-        super(marks, model, types, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner);
-        this.batteryTypes = batteryTypes;
+    public ElectricCar(Mark mark, String model, BodyType bodyType, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, BatteryType batteryType, int chargingTime, int lifeTimeOfBattery) {
+        super(mark, model, bodyType, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner);
+        this.batteryType = batteryType;
         this.chargingTime = chargingTime;
         this.lifeTimeOfBattery = lifeTimeOfBattery;
     }
 
-    public BatteryType getBatteryTypes() {
-        return batteryTypes;
+    public BatteryType getBatteryType() {
+        return batteryType;
     }
 
     public int getChargingTime() {
@@ -30,9 +30,9 @@ public class ElectricCar extends Car {
     @Override
     public String toString() {
         return "ElectricCar{" +
-                "marks=" + marks +
+                "mark=" + mark +
                 ", model='" + model + '\'' +
-                ", types=" + types +
+                ", bodyType=" + bodyType +
                 ", price=" + price +
                 ", year=" + year +
                 ", milage=" + milage +
@@ -41,7 +41,7 @@ public class ElectricCar extends Car {
                 ", acceleration=" + acceleration +
                 ", numberOfSeats=" + numberOfSeats +
                 ", conditioner=" + conditioner +
-                ", batteryTypes=" + batteryTypes +
+                ", batteryType=" + batteryType +
                 ", chargingTime=" + chargingTime +
                 ", lifeTimeOfBattery=" + lifeTimeOfBattery +
                 '}';

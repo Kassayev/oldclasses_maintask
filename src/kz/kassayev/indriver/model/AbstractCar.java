@@ -4,10 +4,10 @@ package kz.kassayev.indriver.model;
  * we make this class abstract so that it is not possible to create its objects
  * variables make protected that heirs could only use
  */
-public abstract class Car {
-    protected Mark marks;
+public abstract class AbstractCar {
+    protected Mark mark;
     protected String model;
-    protected Type types;
+    protected BodyType bodyType;
     protected int price;
     protected int year;
     protected int milage;
@@ -17,10 +17,10 @@ public abstract class Car {
     protected int numberOfSeats;
     protected boolean conditioner;
 
-    public Car(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner) {
-        this.marks = marks;
+    public AbstractCar(Mark mark, String model, BodyType bodyType, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner) {
+        this.mark = mark;
         this.model = model;
-        this.types = types;
+        this.bodyType = bodyType;
         this.price = price;
         this.year = year;
         this.milage = milage;
@@ -31,16 +31,16 @@ public abstract class Car {
         this.conditioner = conditioner;
     }
 
-    public Mark getMarks() {
-        return marks;
+    public Mark getMark() {
+        return mark;
     }
 
     public String getModel() {
         return model;
     }
 
-    public Type getTypes() {
-        return types;
+    public BodyType getBodyType() {
+        return bodyType;
     }
 
     public int getPrice() {
@@ -77,10 +77,10 @@ public abstract class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "marks=" + marks +
+        return "AbstractCar{" +
+                "mark=" + mark +
                 ", model='" + model + '\'' +
-                ", types=" + types +
+                ", bodyType=" + bodyType +
                 ", price=" + price +
                 ", year=" + year +
                 ", milage=" + milage +

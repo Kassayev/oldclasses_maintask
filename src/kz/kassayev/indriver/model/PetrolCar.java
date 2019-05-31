@@ -1,22 +1,22 @@
 package kz.kassayev.indriver.model;
 
 /**
- * This class hier class Car
+ * This class hier class AbstractCar
  */
-public class PetrolCar extends Car {
-    private FuelType fuelTypes;
+public class PetrolCar extends AbstractCar {
+    private FuelType fuelType;
     private int fuelTankCapacity;
     private int fuelConsumption;
 
-    public PetrolCar(Mark marks, String model, Type types, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, FuelType fuelTypes, int fuelTankCapacity, int fuelConsumption) {
-        super(marks, model, types, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner);
-        this.fuelTypes = fuelTypes;
+    public PetrolCar(Mark mark, String model, BodyType bodyType, int price, int year, int milage, int maxSpeed, boolean automat, double acceleration, int numberOfSeats, boolean conditioner, FuelType fuelType, int fuelTankCapacity, int fuelConsumption) {
+        super(mark, model, bodyType, price, year, milage, maxSpeed, automat, acceleration, numberOfSeats, conditioner);
+        this.fuelType = fuelType;
         this.fuelTankCapacity = fuelTankCapacity;
         this.fuelConsumption = fuelConsumption;
     }
 
-    public FuelType getFuelTypes() {
-        return fuelTypes;
+    public FuelType getFuelType() {
+        return fuelType;
     }
 
     public int getFuelTankCapacity() {
@@ -30,9 +30,9 @@ public class PetrolCar extends Car {
     @Override
     public String toString() {
         return "PetrolCar{" +
-                "marks=" + marks +
+                "mark=" + mark +
                 ", model='" + model + '\'' +
-                ", types=" + types +
+                ", bodyType=" + bodyType +
                 ", price=" + price +
                 ", year=" + year +
                 ", milage=" + milage +
@@ -41,7 +41,7 @@ public class PetrolCar extends Car {
                 ", acceleration=" + acceleration +
                 ", numberOfSeats=" + numberOfSeats +
                 ", conditioner=" + conditioner +
-                ", fuelTypes=" + fuelTypes +
+                ", fuelType=" + fuelType +
                 ", fuelTankCapacity=" + fuelTankCapacity +
                 ", fuelConsumption=" + fuelConsumption +
                 '}';

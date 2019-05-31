@@ -1,6 +1,6 @@
 package kz.kassayev.indriver.park;
 
-import kz.kassayev.indriver.model.Car;
+import kz.kassayev.indriver.model.AbstractCar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,13 @@ import java.util.List;
  */
 public class TaxiPark {
     private String name;
-    private List<Car> taxipark = new ArrayList<>();
+    private List<AbstractCar> taxipark = new ArrayList<>();
 
     public TaxiPark(String name) {
         this.name = name;
     }
 
-    public void addCar(Car car) {
+    public void addCar(AbstractCar car) {
         taxipark.add(car);
     }
 
@@ -24,7 +24,7 @@ public class TaxiPark {
         return name;
     }
 
-    public List<Car> getTaxipark() {
+    public List<AbstractCar> getTaxipark() {
         return taxipark;
     }
 }

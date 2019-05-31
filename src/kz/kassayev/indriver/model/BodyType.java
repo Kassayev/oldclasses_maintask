@@ -1,6 +1,6 @@
 package kz.kassayev.indriver.model;
 
-public enum Type {
+public enum BodyType {
     SEDAN,
     HATCHBACK,
     ESTATE,

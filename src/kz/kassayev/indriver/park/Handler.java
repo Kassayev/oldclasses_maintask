@@ -1,6 +1,6 @@
 package kz.kassayev.indriver.park;
 
-import kz.kassayev.indriver.model.Car;
+import kz.kassayev.indriver.model.AbstractCar;
 import kz.kassayev.indriver.model.ElectricCar;
 import kz.kassayev.indriver.model.PetrolCar;
 
@@ -16,9 +16,9 @@ public class Handler {
      * @param cars
      * @return list of cars
      */
-    public List<Car> showAllCars(List<Car> cars) {
-        List<Car> selectAll = new ArrayList<>();
-        for (Car car : cars) {
+    public List<AbstractCar> showAllCars(List<AbstractCar> cars) {
+        List<AbstractCar> selectAll = new ArrayList<>();
+        for (AbstractCar car : cars) {
             selectAll.add(car);
         }
         return selectAll;
@@ -30,9 +30,9 @@ public class Handler {
      * @param cars
      * @return total amount price
      */
-    public int allCarsCost(List<Car> cars) {
+    public int allCarsCost(List<AbstractCar> cars) {
         int sum = 0;
-        for (Car car : cars) {
+        for (AbstractCar car : cars) {
             sum += car.getPrice();
         }
         return sum;
@@ -46,9 +46,9 @@ public class Handler {
      * @param max
      * @return get list of cars, which this speed range
      */
-    public List<Car> showBySpeedRange(List<Car> cars, int min, int max) {
-        List<Car> carSelection = new ArrayList<>();
-        for (Car car : cars) {
+    public List<AbstractCar> showBySpeedRange(List<AbstractCar> cars, int min, int max) {
+        List<AbstractCar> carSelection = new ArrayList<>();
+        for (AbstractCar car : cars) {
             if (car.getMaxSpeed() >= min && car.getMaxSpeed() <= max) {
                 carSelection.add(car);
             }
@@ -63,12 +63,12 @@ public class Handler {
      * @param cars
      * @return get sorted list
      */
-    public List<Car> sortyByFuelEconomy(List<Car> cars) {
+    public List<AbstractCar> sortyByFuelEconomy(List<AbstractCar> cars) {
         List<PetrolCar> petrolCars = new ArrayList<>();
         List<ElectricCar> electricCars = new ArrayList<>();
-        List<Car> result = new ArrayList<>();
+        List<AbstractCar> result = new ArrayList<>();
 
-        for (Car car : cars) {
+        for (AbstractCar car : cars) {
             if (car instanceof ElectricCar) {
                 electricCars.add((ElectricCar) car);
             } else if (car instanceof PetrolCar) {

@@ -1,6 +1,6 @@
 package kz.kassayev.indriver.report;
 
-import kz.kassayev.indriver.model.Car;
+import kz.kassayev.indriver.model.AbstractCar;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ public class CarReport {
      *
      * @param cars
      */
-    public void cycleForSout(List<Car> cars) {
-        for (Car car : cars) {
+    public void cycleForSout(List<AbstractCar> cars) {
+        for (AbstractCar car : cars) {
             System.out.println(car);
         }
     }
